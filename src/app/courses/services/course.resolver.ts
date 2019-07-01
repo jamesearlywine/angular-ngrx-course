@@ -38,7 +38,7 @@ export class CourseResolver implements Resolve<Course> {
             filter(course => !!course),
             first()
           )
-
+        ;
     }
 
 }
