@@ -25,14 +25,17 @@ import {MatIconModule} from "@angular/material/icon";
 import {RouterModule, Routes} from "@angular/router";
 import { EntityMetadataMap, EntityDefinitionService } from '@ngrx/data';
 import { CourseEntityService } from './services/course-entity.service';
+import { CoursesResolver } from './services/courses.resolver';
 
 
 
 export const coursesRoutes: Routes = [
     {
         path: "",
-        component: HomeComponent
-
+        component: HomeComponent,
+        resolve: {
+          courses: CoursesResolver
+        }
     },
     {
         path: ':id',
@@ -73,6 +76,7 @@ export const entityMetadata: EntityMetadataMap = {
     providers: [
         CoursesService,
         CourseResolver,
+        CoursesResolver,
         CourseEntityService
     ]
 })
