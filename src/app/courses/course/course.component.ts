@@ -15,13 +15,13 @@ import {LessonsDataSource} from "../services/lessons.datasource";
 })
 export class CourseComponent implements OnInit, AfterViewInit {
 
-    course:Course;
+    course: Course;
 
     dataSource: LessonsDataSource;
 
     displayedColumns= ["seqNo", "description", "duration"];
 
-    @ViewChild(MatPaginator, {static:false}) paginator: MatPaginator;
+    @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
 
 
     constructor(private route: ActivatedRoute,
@@ -30,12 +30,12 @@ export class CourseComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+      console.log('CourseComponent.ngOnInit()');
+      this.course = this.route.snapshot.data["course"];
 
-        this.course = this.route.snapshot.data["course"];
+      this.dataSource = new LessonsDataSource(this.coursesService);
 
-        this.dataSource = new LessonsDataSource(this.coursesService);
-
-        this.dataSource.loadLessons(this.course.id, 0, 3);
+      this.dataSource.loadLessons(this.course.id, 0, 3);
 
     }
 

@@ -1,0 +1,7 @@
+export const COURSE_CONSTANTS = {
+  CATEGORIES: {
+    BEGINNER: 'BEGINNER',
+    ADVANCED: 'ADVANCED'
+  }
+};
+

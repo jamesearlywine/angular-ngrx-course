@@ -12,6 +12,7 @@ export const USERS = {
 export const COURSES = {
     0: {
         id: 0,
+        seqNo: 3,
         description: "Angular Ngrx Course",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-ngrx-course.png',
         courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
@@ -22,6 +23,7 @@ export const COURSES = {
     },
     1: {
         id: 1,
+        seqNo: 2,
         description: "Angular for Beginners",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/angular2-for-beginners-small-v2.png',
         courseListIcon: 'https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png',
@@ -32,6 +34,7 @@ export const COURSES = {
     },
     2: {
         id: 2,
+        seqNo: 1,
         description: 'Angular Security Course - Web Security Fundamentals',
         longDescription: "Learn Web Security Fundamentals and apply them to defend an Angular / Node Application from multiple types of attacks.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/security-cover-small-v2.png',
@@ -42,6 +45,7 @@ export const COURSES = {
     },
     3: {
         id: 3,
+        seqNo: 5,
         description: 'Angular PWA - Progressive Web Apps Course',
         longDescription: "<p class='course-description'>Learn Angular Progressive Web Applications, build the future of the Web Today.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-university/course-images/angular-pwa-course.png',
@@ -52,6 +56,7 @@ export const COURSES = {
     },
     4: {
         id: 4,
+        seqNo: 4,
         description: 'Angular NgRx Store Reactive Extensions Architecture Course',
         longDescription: "Learn how to the Angular NgRx Reactive Extensions and its Tooling to build a complete application.",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/ngrx-angular.png',
@@ -61,6 +66,7 @@ export const COURSES = {
     },
     5: {
         id: 5,
+        seqNo: 6,
         description: 'Angular Advanced Library Laboratory: Build Your Own Library',
         longDescription: "Learn Advanced Angular functionality typically used in Library Development. Advanced Components, Directives, Testing, Npm",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/advanced_angular-small-v3.png',
@@ -70,6 +76,7 @@ export const COURSES = {
     },
     6: {
         id: 6,
+        seqNo: 8,
         description: 'The Complete Typescript Course',
         longDescription: "Complete Guide to Typescript From Scratch: Learn the language in-depth and use it to build a Node REST API.",
         iconUrl: 'https://angular-academy.s3.amazonaws.com/thumbnails/typescript-2-small.png',
@@ -79,6 +86,7 @@ export const COURSES = {
     },
     7: {
         id: 7,
+        seqNo: 7,
         description: 'Rxjs and Reactive Patterns Angular Architecture Course',
         longDescription: "Learn the core RxJs Observable Pattern as well and many other Design Patterns for building Reactive Angular Applications.",
         iconUrl: 'https://s3-us-west-1.amazonaws.com/angular-academy/blog/images/rxjs-reactive-patterns-small.png',
@@ -88,6 +96,7 @@ export const COURSES = {
     },
     8: {
         id:8,
+        seqNo: 0,
         description: "Angular Material Course",
         iconUrl: "https://s3-us-west-1.amazonaws.com/angular-university/course-images/material_design.png",
         longDescription: "Build Applications with the official Angular Widget Library",

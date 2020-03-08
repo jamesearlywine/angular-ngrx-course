@@ -1,25 +1,21 @@
 import {
-  ActionReducer,
   ActionReducerMap,
-  createFeatureSelector,
-  createSelector,
-  MetaReducer
+  MetaReducer,
+
 } from '@ngrx/store';
 import { environment } from '../../environments/environment';
-import { User } from '@app/model/user.model';
-import { AuthActionTypes } from '@app/auth/auth.actions';
 import * as fromAuth from '@app/auth/auth.reducer';
 import { storeFreeze } from 'ngrx-store-freeze';
-import { Params, RouterStateSnapshot } from '@angular/router';
-import { Injectable } from '@angular/core';
-import { RouterStateSerializer } from '@ngrx/router-store';
+import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 
 export interface AppState {
   auth: fromAuth.AuthState;
+  router: RouterReducerState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  auth: fromAuth.authReducer
+  auth: fromAuth.authReducer,
+  router: routerReducer
 };
 
 
