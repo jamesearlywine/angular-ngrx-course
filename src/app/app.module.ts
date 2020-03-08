@@ -55,7 +55,7 @@ const routes: Routes = [
         StoreModule.forRoot(reducers, { metaReducers }),
         !environment.production ? StoreDevtoolsModule.instrument() : [],
         EffectsModule.forRoot([]),
-        StoreRouterConnectingModule.forRoot({stateKey:'router'})
+        StoreRouterConnectingModule.forRoot({stateKey: 'router'})
     ],
     providers: [
       { provide: RouterStateSerializer, useClass: CustomSerializer }
