@@ -23,6 +23,8 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {RouterModule, Routes} from "@angular/router";
+import { EntityMetadataMap, EntityDefinitionService } from '@ngrx/data';
+import { CourseEntityService } from './services/course-entity.service';
 
 
 
@@ -41,7 +43,9 @@ export const coursesRoutes: Routes = [
     }
 ];
 
-
+export const entityMetadata: EntityMetadataMap = {
+  Course: {}
+};
 
 @NgModule({
     imports: [
@@ -68,10 +72,15 @@ export const coursesRoutes: Routes = [
     entryComponents: [CourseDialogComponent],
     providers: [
         CoursesService,
-        CourseResolver
+        CourseResolver,
+        CourseEntityService
     ]
 })
 export class CoursesModule {
-
+  constructor(
+    private eds: EntityDefinitionService
+  ) {
+    eds.registerMetadataMap(entityMetadata);
+  }
 
 }
